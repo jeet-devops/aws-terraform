@@ -1,10 +1,11 @@
 terraform {
-    backend = "remote" {
-        hostname = "app.terraform.io"
-        organization = "jeetdevops"
+  cloud {
+    organization = "jeetdevops"
+    hostname = "app.terraform.io" # Optional; defaults to app.terraform.io
 
-        workspaces {
-            name = "aws-tf-workspace"
-        }
+    workspaces {
+      name = "aws-tf-workspace"
+      tags = ["aws", "source:cli"]
     }
+  }
 }
