@@ -5,7 +5,6 @@ terraform {
 
     workspaces {
       name = "aws-tf-workspace"
-      tags = ["aws", "source:cli"]
     }
   }
 }
