@@ -1,9 +1,10 @@
 terraform {
-  cloud {
-    organization = "jeetdevops"
+    backend = "remote" {
+        hostname = "app.terraform.io"
+        organization = "jeetdevops"
 
-    workspaces {
-      name = "aws-tf-workspace"
+        workspaces {
+            name = "aws-tf-workspace"
+        }
     }
-  }
 }
